@@ -1,0 +1,30 @@
+{
+  "name": "Ask AI GPT",
+  "version": "1.0",
+  "description": "Ask to gpt without leaving your current tab using ask keyword and more..",
+  "manifest_version": 3,
+  "options_page": "settings.html",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "clipboardWrite",
+    "contextMenus",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+
+  "action": {
+    "default_title": "Ask AI GPT",
+    "default_popup": "popup.html",
+    "default_icon": "images/icon64.png"
+  },
+  "icons": {
+    "64": "images/icon64.png"
+  }
+}
